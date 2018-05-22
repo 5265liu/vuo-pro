@@ -39,6 +39,7 @@
 				 }
 
 				 this.valueData = year + '-' + month; 
+				 this.$emit("get-init-date",this.valueData);
 			}
 		}
 	}

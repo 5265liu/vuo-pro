@@ -1,179 +1,177 @@
 <template>
-	<div class="wrap">
-		<div id="index" class="cabinIndex">
-			<div class="content">
-			    <div class="overview">
-			    	<div class="module_1">
-			    		<timeEnd @end-data="endDataParent"></timeEnd>
-			    		<div class="module-content">
-			    			<div class="content_1">
-			    				<div>项目总数</div>
-			    				<div class="module-num">
-			    					<span id="proj-all">{{projAll}}</span>个
-			    				</div>
-			    			</div>
-			    			<div class="content_1">
-			    				<div>前期项目</div>
-			    				<div class="module-num">
-			    					<span id="proj-before">{{projBefore}}</span>个
-			    				</div>
-			    			</div>
-			    			<div class="content_1">
-			    				<div>在建项目</div>
-			    				<div class="module-num">
-			    					<span id="proj-on">{{projOn}}</span>个
-			    				</div>
-			    			</div>
-			    		</div>
-			    	</div>
-			    	<div class="module_2">
-			    		<div class="module-title">
-	                        <img class="left_logo" src="../assets/img/investment.png" />
-			    			<span>投资</span>
-			    		</div>
-			    		<div class="module-content">
-							<div class="box">
-	                            <div class="box-title">
-	                            	<span class="monthSelect">{{choseMonth}}</span>月完成
-	                            	<i class="yuan" id="invest-month">{{investMonth}}</i>
-	                            	<i id="INVEST_MONEYMTYPE">{{investMonthUnit}}</i>
-	                            </div>
-								<div class="ok">
-									<div class="ok-title">月完成率</div>
-									<div class="ok-rate">
-										<span id="invest-month-rate">{{investMonthRate}}</span>
-									</div>
-	                            </div>
-								<div class="tbox">
-									<el-progress :percentage="investMonthPer" :stroke-width="12" :show-text="false"></el-progress>
+	<div id="index" class="cabinIndex">
+		<div class="content">
+		    <div class="overview">
+		    	<div class="module_1">
+		    		<timeEnd @end-data="endDataParent"></timeEnd>
+		    		<div class="module-content">
+		    			<div class="content_1">
+		    				<div>项目总数1</div>
+		    				<div class="module-num">
+		    					<span id="proj-all">{{projAll}}</span>个
+		    				</div>
+		    			</div>
+		    			<div class="content_1">
+		    				<div>前期项目</div>
+		    				<div class="module-num">
+		    					<span id="proj-before">{{projBefore}}</span>个
+		    				</div>
+		    			</div>
+		    			<div class="content_1">
+		    				<div>在建项目</div>
+		    				<div class="module-num">
+		    					<span id="proj-on">{{projOn}}</span>个
+		    				</div>
+		    			</div>
+		    		</div>
+		    	</div>
+		    	<div class="module_2">
+		    		<div class="module-title">
+                        <img class="left_logo" src="../assets/img/investment.png" />
+		    			<span>投资</span>
+		    		</div>
+		    		<div class="module-content">
+						<div class="box">
+                            <div class="box-title">
+                            	<span class="monthSelect">{{choseMonth}}</span>月完成
+                            	<i class="yuan" id="invest-month">{{investMonth}}</i>
+                            	<i id="INVEST_MONEYMTYPE">{{investMonthUnit}}</i>
+                            </div>
+							<div class="ok">
+								<div class="ok-title">月完成率</div>
+								<div class="ok-rate">
+									<span id="invest-month-rate">{{investMonthRate}}</span>
 								</div>
+                            </div>
+							<div class="tbox">
+								<el-progress :percentage="investMonthPer" :stroke-width="12" :show-text="false"></el-progress>
 							</div>
-							<div class="box">
-								<div class="box-title">
-									<span class="yearSelect">{{choseYear}}</span>年完成
-									<i class="year-yuan" id="invest-year">{{investYear}}</i>
-									<i id="INVEST_MONEYYTYPE">{{investYearUnit}}</i>
-								</div>
-								<div class="ok">
-									<div class="ok-title">年完成率</div>
-									<div class="ok-rate">
-										<span id="invest-year-rate">{{investYearRate}}</span>
-									</div>
-								</div>
-								<div class="tbox">
-									<el-progress :percentage="investYearPer" :show-text="false" :stroke-width="12" ></el-progress>
-								</div>
-							</div>
-			    		</div>
-			    	</div>
-			    	<div class="module_2">
-			    		<div class="module-title">
-							<img class="left_logo" src="../assets/img/pay.png" />
-			    			<span>支付</span>
-			    		</div>
-			    		<div class="module-content">
-							<div class="box">
-								<div class="box-title module2_box_title">
-									<span class="monthSelect">{{choseMonth}}</span>月完成
-									<i class="yuan" id="pay-month">{{payMonthMoney}}</i>
-									<i id="PAY_MONTHTYPE">{{payMonthMoneyUnit}}</i>
-								</div>
-	                            <div class="box-title module2_box_title">
-	                            	<span class="yearSelect">{{choseYear}}</span>年完成<i class="yuan" id="pay-year">{{payYearMoney}}</i>
-	                            	<i id="PAY_YEARTYPE">{{payYearMoneyUnit}}</i>
-	                            </div>
-	                            <div class="box-title module2_box_title">汇总完成
-	                            	<i class="yuan" id="pay-total">{{payTotalMoney}}</i>
-	                            	<i id="PAY_TOTLETYPE">{{payTotalMoneyUnit}}</i>
-	                            </div>
-								<div class="ok">
-									<div class="ok-title">整体支付进度</div>
-								</div>
-								<div class="tbox payfor">
-									<el-progress :percentage="payRate" :stroke-width="12" :show-text="false"></el-progress>
-								</div>
-							</div>
-			    		</div>
-			    	</div>
-			    	<div class="module_2 module_3">
-			    		<div class="module-title">
-	                        <img class="left_logo" src="../assets/img/bidding.png" />
-			    			<span>招投标</span>
-			    		</div>
-			    		<div class="module-content">
-							<div class="box">
-								<div class="box-title">
-									<span class="monthSelect">{{choseMonth}}</span>月完成
-								</div>
-								<div class="ok last-two">
-									<div class="ok-title">招标额
-	                                     <span class="yuan" id="bidding-month">{{tenderAmoutMonthRate}}</span>
-	                                     <i id="BIDDING_MONEYMTYPE">{{BIDDING_MONEYMTYPE}}</i>
-	                                </div>
-	                                <div class="ok-rate">招标数
-	                                     <span class="yuan" id="biddingnum-month">{{tenderAmoutMonthNum}}</span>
-	                                     <i>个</i>
-	                                </div>
-								</div>
-							</div>
-							<div class="box">
-								<div class="box-title">
-									<span class="yearSelect">{{choseYear}}</span>年完成
-								</div>
-								<div class="ok last-two">
-									<div class="ok-title">招标额
-										<span class="yuan" id="bidding-year">{{tenderAmoutYearRate}}</span>
-										<i id="BIDDING_MONEYYTYPE">{{BIDDING_MONEYYTYPE}}</i>
-									</div>
-									<div class="ok-rate">招标数
-										<span class="yuan" id="biddingnum-year">{{tenderAmoutYearNum}}</span>
-										<i>个</i>
-									</div>
-								</div>
-							</div>
-			    		</div>
-			    	</div>
-			    	<div class="module_2 module_3">
-			    		<div class="module-title">
-	                        <img class="left_logo" src="../assets/img/contract.png" />
-			    			<span>合同</span>
 						</div>
-			    		<div class="module-content">
-							<div class="box">
-								<div class="box-title">
-									<span class="monthSelect">{{choseMonth}}</span>月完成
-								</div>
-								<div class="ok last-two">
-									<div class="ok-title">合同额
-										<span class="yuan" id="contract-month">{{monthContractRate}}</span>
-										<i id="CONTRACT_MONEYMTYPE">{{CONTRACT_MONEYMTYPE}}</i>
-									</div>
-									<div class="ok-rate">合同数
-										<span class="yuan" id="contractnum-month">{{monthContractNum}}</span>
-										<i>个</i>
-									</div>
+						<div class="box">
+							<div class="box-title">
+								<span class="yearSelect">{{choseYear}}</span>年完成
+								<i class="year-yuan" id="invest-year">{{investYear}}</i>
+								<i id="INVEST_MONEYYTYPE">{{investYearUnit}}</i>
+							</div>
+							<div class="ok">
+								<div class="ok-title">年完成率</div>
+								<div class="ok-rate">
+									<span id="invest-year-rate">{{investYearRate}}</span>
 								</div>
 							</div>
-							<div class="box">
-								<div class="box-title">
-									<span class="yearSelect">{{choseYear}}</span>年完成
+							<div class="tbox">
+								<el-progress :percentage="investYearPer" :show-text="false" :stroke-width="12" ></el-progress>
+							</div>
+						</div>
+		    		</div>
+		    	</div>
+		    	<div class="module_2">
+		    		<div class="module-title">
+						<img class="left_logo" src="../assets/img/pay.png" />
+		    			<span>支付</span>
+		    		</div>
+		    		<div class="module-content">
+						<div class="box">
+							<div class="box-title module2_box_title">
+								<span class="monthSelect">{{choseMonth}}</span>月完成
+								<i class="yuan" id="pay-month">{{payMonthMoney}}</i>
+								<i id="PAY_MONTHTYPE">{{payMonthMoneyUnit}}</i>
+							</div>
+                            <div class="box-title module2_box_title">
+                            	<span class="yearSelect">{{choseYear}}</span>年完成<i class="yuan" id="pay-year">{{payYearMoney}}</i>
+                            	<i id="PAY_YEARTYPE">{{payYearMoneyUnit}}</i>
+                            </div>
+                            <div class="box-title module2_box_title">汇总完成
+                            	<i class="yuan" id="pay-total">{{payTotalMoney}}</i>
+                            	<i id="PAY_TOTLETYPE">{{payTotalMoneyUnit}}</i>
+                            </div>
+							<div class="ok">
+								<div class="ok-title">整体支付进度</div>
+							</div>
+							<div class="tbox payfor">
+								<el-progress :percentage="payRate" :stroke-width="12" :show-text="false"></el-progress>
+							</div>
+						</div>
+		    		</div>
+		    	</div>
+		    	<div class="module_2 module_3">
+		    		<div class="module-title">
+                        <img class="left_logo" src="../assets/img/bidding.png" />
+		    			<span>招投标</span>
+		    		</div>
+		    		<div class="module-content">
+						<div class="box">
+							<div class="box-title">
+								<span class="monthSelect">{{choseMonth}}</span>月完成
+							</div>
+							<div class="ok last-two">
+								<div class="ok-title">招标额
+                                     <span class="yuan" id="bidding-month">{{tenderAmoutMonthRate}}</span>
+                                     <i id="BIDDING_MONEYMTYPE">{{BIDDING_MONEYMTYPE}}</i>
+                                </div>
+                                <div class="ok-rate">招标数
+                                     <span class="yuan" id="biddingnum-month">{{tenderAmoutMonthNum}}</span>
+                                     <i>个</i>
+                                </div>
+							</div>
+						</div>
+						<div class="box">
+							<div class="box-title">
+								<span class="yearSelect">{{choseYear}}</span>年完成
+							</div>
+							<div class="ok last-two">
+								<div class="ok-title">招标额
+									<span class="yuan" id="bidding-year">{{tenderAmoutYearRate}}</span>
+									<i id="BIDDING_MONEYYTYPE">{{BIDDING_MONEYYTYPE}}</i>
 								</div>
-								<div class="ok last-two">
-									<div class="ok-title">合同额
-										<span class="yuan" id="contract-year">{{yearContractRate}}</span>
-										<i id="CONTRACT_MONEYYTYPE">{{CONTRACT_MONEYYTYPE}}</i>
-									</div>
-									<div class="ok-rate">合同数
-										<span class="yuan" id="contractnum-year">{{yearContractNum}}</span>
-										<i>个</i>
-									</div>
+								<div class="ok-rate">招标数
+									<span class="yuan" id="biddingnum-year">{{tenderAmoutYearNum}}</span>
+									<i>个</i>
 								</div>
 							</div>
-				    	</div>
-				    </div>
-				</div>
-				<homePageEchart :choseYearChild="choseYear" :choseMonthChild="choseMonth" :endDataChild="endData"></homePageEchart>
+						</div>
+		    		</div>
+		    	</div>
+		    	<div class="module_2 module_3">
+		    		<div class="module-title">
+                        <img class="left_logo" src="../assets/img/contract.png" />
+		    			<span>合同</span>
+					</div>
+		    		<div class="module-content">
+						<div class="box">
+							<div class="box-title">
+								<span class="monthSelect">{{choseMonth}}</span>月完成
+							</div>
+							<div class="ok last-two">
+								<div class="ok-title">合同额
+									<span class="yuan" id="contract-month">{{monthContractRate}}</span>
+									<i id="CONTRACT_MONEYMTYPE">{{CONTRACT_MONEYMTYPE}}</i>
+								</div>
+								<div class="ok-rate">合同数
+									<span class="yuan" id="contractnum-month">{{monthContractNum}}</span>
+									<i>个</i>
+								</div>
+							</div>
+						</div>
+						<div class="box">
+							<div class="box-title">
+								<span class="yearSelect">{{choseYear}}</span>年完成
+							</div>
+							<div class="ok last-two">
+								<div class="ok-title">合同额
+									<span class="yuan" id="contract-year">{{yearContractRate}}</span>
+									<i id="CONTRACT_MONEYYTYPE">{{CONTRACT_MONEYYTYPE}}</i>
+								</div>
+								<div class="ok-rate">合同数
+									<span class="yuan" id="contractnum-year">{{yearContractNum}}</span>
+									<i>个</i>
+								</div>
+							</div>
+						</div>
+			    	</div>
+			    </div>
 			</div>
+			<homePageEchart :choseYearChild="choseYear" :choseMonthChild="choseMonth" :endDataChild="endData"></homePageEchart>
 		</div>
 	</div>
 </template>
@@ -329,23 +327,4 @@
 	}
 </script>
 <style type="text/css">
-	@import "../assets/css/cabin.css";
-	.module-title .el-date-editor.el-input{
-		margin-left: 20px;
-		width: 120px;
-	}
-
-	.module-title .el-input__inner{
-		height: 30px;
-		line-height: 30px;
-	}
-
-	.search-box .el-input{
-		width:auto;
-	}
-
-	.search-box .el-input__inner{
-		width:300px;
-		border-radius: 0;
-	}
 </style>

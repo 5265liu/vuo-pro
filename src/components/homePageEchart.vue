@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div style="overflow: hidden;">
 		<div class="left_b">
 			<!--地图-->
 			<div class="map">
@@ -79,7 +79,7 @@
 			showProjInfo:function(data){
 				var that=this;
 
-				var url = "/api//txieasyui?taskFramePN=DriverPorjet&command=getProjectInfoByCode&colname=json_ajax&colname1={%27dataform%27:%27eui_variable_data%27,%27variable%27:%27returnJson%27}&code="+data.EAF_ID;
+				var url = "/api/txieasyui?taskFramePN=DriverPorjet&command=getProjectInfoByCode&colname=json_ajax&colname1={%27dataform%27:%27eui_variable_data%27,%27variable%27:%27returnJson%27}&code="+data.EAF_ID;
 
 				this.$http.post(url).then(function (response) {
 					if(response.data.code == 200){
@@ -773,7 +773,6 @@
 	}
 </script>
 <style type="text/css">
-	@import "../assets/css/cabin.css";
 	.search-box .el-input{
 		width:auto;
 	}

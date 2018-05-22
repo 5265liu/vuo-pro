@@ -41,7 +41,7 @@ export default {
 
 <style>
 @import './assets/css/main.css';
-
+@import "./assets/css/cabin.css";
 .mainPage{
   width:100%;
   height:100%;

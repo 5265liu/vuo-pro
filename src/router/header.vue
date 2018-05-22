@@ -39,8 +39,12 @@
       	<a data-name="agreement">履约评价</a>
       	<a data-name="change">变更签证</a>
       </div>
-      <!--路由切换菜单-->
-      <router-view></router-view>
+      <!--路由切换菜单,keep-alive不会重新加载数据-->
+      <div class="wrap" id="wrap" :style="{height:screenHeight}">
+      	<keep-alive>
+      		<router-view></router-view>
+      	</keep-alive>
+      </div>
     </div>
 </template>
 <script>
@@ -53,11 +57,23 @@
 		data:function(){
 			return{
 				options:[],
-				headerSelOPtion:''
+				headerSelOPtion:'',
+				docHeight:document.body.clientHeight //定义屏幕高度
 			}
+		},
+		mounted(){
+			var that = this;
+			window.onresize = function () {
+        		that.docHeight = document.body.clientHeight;  //窗口改变时监听屏幕高度
+        	}
 		},
 		created(){
 			this.getHeaderSelData();
+		},
+		computed:{  //选择用计算属性，通过屏幕高度的改变返回当前div的高度
+			screenHeight:function(){
+				return ((this.docHeight -120)+'px');
+			}
 		},
 		methods:{
 			getHeaderSelData:function(){
@@ -116,16 +132,12 @@
 		color:#a0d1ff;
 	}
 	.banner{
-		position: absolute;
-		width:100%;
-		padding:0 1%;
 		padding-left: 0.9%;
 		background:#062750;
-		top:66px;
-		left:0;
 		z-index:9;
 		border:1px solid #11345c;
 		z-index: 10;
+		overflow: hidden;
 	}
 	.banner>a{
 		display:block;

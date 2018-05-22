@@ -4,17 +4,16 @@ html,body{
 }
 
 .wrap{
-    position: absolute;
-    left: 0;
-    top: 113px;
     width: 100%;
-    height:100%;
     overflow-y: auto;
 }
 
-.content{
-    height: 100%;
-    position: relative;
+.content,.investment-first{
+    overflow: hidden;
+}
+
+.investment .investment-first{
+    margin-bottom: 20px;
 }
 
 .content .overview{
@@ -30,7 +29,7 @@ html,body{
 .cabinIndex,.investment,.bids,.contract,.agreement{
     width: 100%;
     height: 100%;
-    padding: 0px 1%;
+    padding: 0px 2%;
     background: #042246;
    /* overflow-y: auto;*/
 }
@@ -400,7 +399,6 @@ html,body{
 .instruction {
     width: 100%;
     margin-top: 16px;
-    margin-bottom: 130px;
     overflow: hidden;
 }
 
@@ -442,4 +440,576 @@ html,body{
     height: 300px;
     width: 50%;
     float: left;
+}
+
+.bids-content{
+    width:100%;
+    height:194px;
+    overflow: hidden;
+}
+
+.bids-content>div{
+    float:left;
+}
+
+.bids-content>div:nth-of-type(2){
+    margin: 0 1%;
+}
+
+.bids-banner-title{
+    width:11%;
+    margin-right:10px;
+}
+
+.bid-banner-span{
+    display:block;
+    width:100%;
+    height:38px;
+    line-height: 38px;
+    color:#78aae5;
+    background:#083e7c;
+    text-align:center;
+    border-bottom: 1px solid #021d3b;
+    border-top:1px solid #27649b;
+    position:relative;
+    cursor: pointer;
+    font-size:16px;
+}
+
+.bids-banner-title-active{
+    background: #058bea;
+    color: #fff;
+    box-shadow: 0px 1px 3px #04213c;    
+}
+
+.bid-banner-span i{
+    display: none;
+}
+
+.bids-banner-title-active i{
+    display: inline-block;
+    background:url(../img/right-triangle.png) no-repeat;
+    position:absolute;
+    width: 11px;
+    height: 16px;
+    right: -11px;
+    top: 10px;
+}
+
+.payfor .bid-banner-span {
+    height: 48px;
+    line-height: 48px;
+}
+
+.bids-year-count{
+    width:43%;
+    height:190px;
+    border:1px solid #043766;
+    background:#062750;
+    color:#f4f4f4;
+    font-size: 14px;
+}
+.bids-panel{
+    width:126px;
+    height:118px;
+    background:#133d6f;
+    margin-left: 18px;
+    margin-top: 10px;
+    text-align: center;
+    padding-top: 28px;
+}
+.bids-year-count-title{
+    height:40px;
+    line-height:40px;
+    padding-left:18px;
+    color: #f4f4f4;
+    font-size:16px;
+}
+.agreement-first .bids-year-count-title{
+    padding-left:8px;
+}
+.contract-year-count .bids-year-count-title{
+        line-height: 58px;
+}
+.contract-year-count .bids-middle{
+        margin-top: 8px;
+    padding-top: 14px;
+}
+.bids-year-count-title img{
+    position: relative;
+    top: 3px;
+    margin-right: 7px;
+}
+.bids-year-content{
+    position:relative;
+}
+.bids-year-content>div{
+    float:left;
+}
+.bid-nums span{
+    font-size:28px;
+    color:#39adff;
+    font-weight: bolder;
+    margin-right:4px;
+}
+.bid-nums{
+    color:#3aaeff;
+}
+.bids-finished{
+    margin-bottom: 10px;
+}
+.bids-middle-content{
+    color:#a4c0d5;
+    margin-left: 18px;
+    line-height: 20px;
+    margin-top: 8px;
+   
+}
+.bids-middle-content>span{
+     font-size:20px;
+     color: #f4f4f4;
+     margin-right: 4px;
+     margin-left: 2px;
+}
+.bids-middle-content>i{
+     color: #f4f4f4;
+}
+.bids-middle-1{
+    border-right:1px solid #123c6e;
+}
+.bids-middle{
+    margin-top: 13px;
+    line-height: 52px;
+    width: 37%;
+   /* padding: 15px 0;*/
+}
+.bids-middle-2{
+    margin-left:18px;
+}
+.bids-content_2{
+    margin:28px 0;
+    height:252px;
+    
+}
+.bids-content_2>div{
+    float:left;
+    background: #062750;
+}
+.bids-content_2>div:nth-of-type(1){
+    height: 100%;
+    width: 67.5%;
+    border: 1px solid #043766;
+    position:relative;
+}
+.bids-content_2>div:nth-of-type(2){
+    height: 100%;
+    width: 31.3%;
+    border: 1px solid #043766;
+    margin-left: 1%;
+    position: relative;
+}
+.bids-content-header{
+    background: #083e7c;
+}
+
+.middle-tip{
+    color: #f4f4f4;
+    width: 98px;
+    text-align: center;
+    font-size: 16px;
+    position:absolute;
+}
+.bids-content_2 .middle-tip_1{
+    top: 35%;
+    left: 25.5%;
+    width: 115px;
+    height: 115px;
+    line-height: 115px;
+    border: 1px solid transparent;
+    text-align: center;
+    border-radius: 50%;
+}
+.bids-content_2 .middle-tip_2{
+    top: 40%;
+    left: 44.5%;
+    width: 92px;
+    height: 92px;
+    padding-top: 28px;
+    border: 1px solid transparent;
+    text-align: center;
+    border-radius: 50%;
+
+}
+.bids-content_2 .middle-tip_3{
+    top: 35%;
+    left: 63.5%;
+    width: 115px;
+    height: 115px;
+    line-height: 115px;
+    line-height: 115px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    text-align: center;
+}
+.bids-content_2 .middle-tip_4{
+    top: 35%;
+    left: 82.5%;
+    width: 115px;
+    height: 115px;
+    padding-top: 39px;
+    border: 1px solid transparent;
+    text-align: center;
+    border-radius: 50%;
+}
+.bids-content_3{
+    height:398px;
+    margin-bottom: 28px;
+}
+.bids-content_3>div{
+    float:left;
+}
+.bids-content_3>div:nth-of-type(1){
+    height:100%;
+    width:64%;
+    border: 1px solid #043766;
+    background: #062750;
+}
+.bids-content_3>div:nth-of-type(2){
+    background: #062750;
+}
+.bids-content_3>div:nth-of-type(2){
+    height: 100%;
+    width: 35%;
+    border: 1px solid #043766;
+    margin-left: 1%;
+}
+
+.bids-content_3 .sub-title{
+    height:56px;
+    line-height:56px;
+    width:100%;
+}
+.bids-content_3 .rank-list tr td {
+    height: 60px;
+}
+
+.payfor .bid-nums span{
+    font-size:20px;
+}
+
+.payfor .bids-middle-content>span {
+    font-size: 18px;
+}
+
+.payfor .bid-nums,.payfor .bid-nums span{
+    color:#fff;
+}
+
+.invest-left-c{
+    border: 1px solid #063666;
+    width: 63.1%;
+    height: 668px;
+    max-height: 668px;
+    overflow-y:auto;
+    background: #062750;
+}
+.invest-right-c{
+    width: 35.5%;
+    border: 1px solid #063666;
+    max-height: 668px;
+    height: 668px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+.investment .overview{
+    overflow:hidden;
+}
+
+.invest-charts{
+    margin-top:28px;
+    overflow:hidden;
+}
+.invest-charts>div{
+    
+    float:left;
+}
+.invest-charts>div:nth-of-type(1){
+    margin-right: 12px;
+}
+.invest-month-finished{
+    height:430px;
+}
+
+.invest-month-title{
+    background: #042e60;
+    height: 40px;
+    line-height: 40px;
+    color: #f4f4f4;
+    padding-left: 4%;
+    font-size: 16px;
+    width: 100%;
+    position:relative;
+}
+/*.swiper-container,.swiper-wrapper{
+   width:100%!important;
+}
+.swiper-slide{
+    width:100%!important;
+    overflow:hidden;
+}*/
+
+.swiper-container{width:100%!important;}
+.swiper-wrapper{width:100%!important;}
+.swiper-slide {
+    width:100%!important;
+}
+.changebox>div{
+    width:99%;  
+}
+.rank-list tr td{
+    height: 58px;
+}
+.charts-invest-top{
+    width:100%;
+    height:430px;
+    overflow:hidden;
+    padding-bottom:10px;    
+}
+.invest-table{
+    clear:both;
+    margin:0 auto;
+    margin-top: 74px;
+    table-layout: fixed;
+}
+.invest-table th{
+    width:58px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    background:#174579;
+    color:#93b4c5;
+    border:1px solid #032d57;
+}
+.invest-table td{
+    width: 56px;
+    text-align: center;
+    background: #073163;
+    color: #fff;
+    border: 1px solid #032d57;
+    padding: 8px 0;
+    word-wrap: break-word;
+    word-break: normal;
+}
+.select-container{
+    display: inline-block;
+    float: right;
+    margin-right: 15px;
+}
+.select-style{
+    width: 85px;
+    height: 22px;
+    line-height: 20px;
+    display:inline-block;
+    border: 1px solid #598fbb;
+    text-align: center;
+    margin-left: 14px;
+    position:relative;
+    cursor: pointer;
+}
+.selected-active{
+    width: 16px;
+    height: 8px;
+    background: url(../img/down-triangle.png) no-repeat;
+    position: absolute;
+    left: 35px;
+    top: 20px;
+}
+
+.module-title .el-date-editor.el-input{
+    margin-left: 20px;
+    width: 120px;
+}
+
+.module-title .el-input__inner{
+    height: 30px;
+    line-height: 30px;
+}
+
+.search-box .el-input{
+    width:auto;
+}
+
+.search-box .el-input__inner{
+    width:300px;
+    border-radius: 0;
+}
+
+.invest-table{
+    clear: both;
+    margin: 0 10px;
+    margin-top: 74px;
+    table-layout: fixed;
+    font-size: 12px;
+}
+
+.invest-table td {
+    width: 56px;
+    text-align: center;
+    background: #073163;
+    color: #fff;
+    border: 1px solid #032d57;
+    padding: 8px 0;
+    word-wrap: break-word;
+    word-break: normal;
+}
+
+.investment-chart-box {
+    margin-bottom: 10px;
+    background: #062750;
+    border: 1px solid #063666;
+    position: relative;
+}
+
+.investment-chart-box .middle-tip_1 {
+    top: 40.5%;
+    left: 40%;
+    border: 1px solid transparent;
+    height: 93px;
+    padding-top: 26px;
+    border-radius: 50%;
+    width: 94px;
+}
+
+.investment-chart-box .middle-tip_2 {
+    top: 40.5%;
+    left: 74%;
+    border: 1px solid transparent;
+    height: 93px;
+    border-radius: 50%;
+    width: 94px;
+    padding-top: 26px;
+}
+
+.more-info {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url(../img/more.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 8px;
+}
+
+.selected-active-c {
+    background: #048ae9;
+    color: #fff;
+}
+
+.sub-title {
+    background: #062750;
+    color: #91b4c8;
+    height: 46px;
+    line-height: 46px;
+    font-size: 16px;
+    width: 100%;
+    padding-left: 4%;
+    padding-right: 2%;
+}
+
+.sub-title-right {
+    float: right;
+}
+
+.sub-title-box {
+    display: inline-block;
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+.sort-img {
+    width: 12px;
+    height: 20px;
+    display: inline-block;
+    background: url(../img/default-sort.png) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    top: 4px;
+    left: -2px;
+}
+
+.sort-img-rate {
+    width: 12px;
+    height: 20px;
+    display: inline-block;
+    background: url(../img/descend.png) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    top: 4px;
+    left: -2px;
+}
+
+.rank-list-c {
+    position: relative;
+    width: 100%;
+}
+
+.rank-list {
+    font-size: 16px;
+    color: #e7eded;
+    width: 100%;
+}
+
+.rank-list tr:nth-child(odd) {
+    background: #042e60;
+}
+
+.rank-list tr {
+    width: 100%;
+}
+
+.rank-list tr td {
+    height: 58px;
+}
+
+.real-rank-list {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.no-data {
+    position: absolute;
+    width: 146px;
+    display: none;
+}
+
+.first-td {
+    text-align: right;
+    width: 8.8%;
+}
+
+.second-td {
+    width: 52%;
+    cursor: pointer;
+}
+
+.third-td {
+    text-align: center;
+    width: 20%;
+}
+
+.forth-td {
+    text-align: center;
+}
+
+.sortRankChose{
+    background:url(../img/ascend.png) no-repeat;
+    width: 12px;
+    height: 20px;
+    display: inline-block;
+    background-size: 100% 100%;
+}
+
+.rankChild{
+    cursor: pointer;
 }
